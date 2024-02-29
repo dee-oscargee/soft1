@@ -1,0 +1,46 @@
+
+body{
+    height: 100vh;
+    background-color: aliceblue #8abcef;
+    display: grid;
+    text-align: center;
+    grid-template-rows: 1fr 8fr 3fr;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: aliceblue;
+    border: solid 1px green;
+    border-radius: 5px;
+
+}
+header >div{
+    background-color: pink;
+    gap: 3px;
+}
+nav{
+    background-color: yellow;
+}
+main{background-color: #a5def7;}
+footer{background-color: rgb(178, 175, 175);
+}
+@media only screen and (min-width: 420px){
+    body{
+        grid-template-areas:'header main'
+                             'header main'
+                             'footer footer';
+       grid-template-columns: 2fr 10fr;
+
+    }
+    header{
+        grid-area: header;
+        grid-template-columns: 2fr;
+    }
+    main{
+        grid-area: main;
+    }
+    footer{
+        grid-area: footer;
+    }
+
+}
